@@ -7,7 +7,6 @@
 - name: install deps (Ubuntu)
   apt:
     pkg: dnsmasq
-    state: installed
   when: ansible_os_family == "Debian"
 
 - name: install deps (RHEL)
