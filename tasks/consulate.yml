@@ -6,12 +6,10 @@
   when: ansible_os_family == "Debian"
 
 - name: install deps (Ubuntu)
-  apt: >
-    pkg={{item}}
-    state=installed
-  with_items:
-    - python-pip
-    - python-dev
+  apt:
+    name:
+      - python-pip
+      - python-dev
   when: ansible_os_family == "Debian"
 
 - name: install deps (RHEL)
